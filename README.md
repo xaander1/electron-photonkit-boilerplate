@@ -1,2 +1,3 @@
-# Simple boilerplate for now
-Contributioms are welcomed
+**Simple boilerplate**
+
+> Contributions are welcomed 
