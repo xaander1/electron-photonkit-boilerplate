@@ -15,24 +15,24 @@
 
     <div class="toolbar-actions">
     <div class="btn-group">
-      <button class="btn btn-default">
+      <button id="home" class="btn btn-default header-tab">
         <span class="icon icon-home"></span>
       </button>
-      <button class="btn btn-default">
+      <button id="folder" class="btn btn-default header-tab">
         <span class="icon icon-folder"></span>
       </button>
-      <button class="btn btn-default active">
+      <button id="cloud" class="btn btn-default header-tab">
         <span class="icon icon-cloud"></span>
       </button>
-      <button class="btn btn-default">
+      <button id="popup" class="btn btn-default header-tab">
         <span class="icon icon-popup"></span>
       </button>
-      <button class="btn btn-default">
+      <button id="shuffle" class="btn btn-default header-tab">
         <span class="icon icon-shuffle"></span>
       </button>
     </div>
 
-    <button class="btn btn-default">
+    <button id="filters" class="btn btn-default header-tab">
       <span class="icon icon-home icon-text"></span>
       Filters
     </button>
@@ -46,42 +46,12 @@
       <!-- Your app's content goes inside .window-content -->
       <div class="window-content">
         <div class="pane-group">
-          <div class="pane pane-sm sidebar">
-            <nav class="nav-group">
-              <h5 class="nav-group-title">Favorites</h5>
-              <span class="nav-group-item" id="favourite" >
-                <span class="icon icon-home"></span>
-                connors
-              </span>
-              <span class="nav-group-item active">
-                <span class="icon icon-light-up"></span>
-                Photon
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-download"></span>
-                Downloads
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-folder"></span>
-                Documents
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-window"></span>
-                Applications
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-signal"></span>
-                AirDrop
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span>
-            </nav>
+          <div id="sidebar" class="pane pane-sm sidebar">
+          <!-- Where sidebar content is rendered to -->
           </div>
 
           <div id="main" class="pane">
-
+            <!-- Where main content is rendered to -->
           </div>
 
 

@@ -1,8 +1,9 @@
 class Tabs{
-    constructor(evt,tabslinks,page_to_load,){
+    constructor(evt,tabslinks,section,page_to_load,){
         this.page_to_load = page_to_load;
         this.tabslinks = tabslinks;
         this.evt=evt;
+        this.section=section;
         this.tabsHandler();
     }
 //handle the routing between pages
@@ -10,8 +11,8 @@ class Tabs{
         fetch(this.page_to_load)
         .then(data => data.text())
         .then(html=> {
-        document.getElementById('main').innerHTML = html;
-        var scripts = document.getElementById("main").querySelectorAll("script");
+        document.getElementById(this.section).innerHTML = html;
+        var scripts = document.getElementById(this.section).querySelectorAll("script");
         for (var i = 0; i < scripts.length; i++) {
             if (scripts[i].innerText) {
                 eval(scripts[i].innerText);
