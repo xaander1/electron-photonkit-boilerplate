@@ -4,7 +4,8 @@ class Tabs{
         this.tabslinks = tabslinks;
         this.evt=evt;
         this.section=section;
-        this.tabsHandler();
+        let log = this.tabsHandler();
+        return(log);
     }
 //handle the routing between pages
     tabsHandler(){
@@ -27,7 +28,10 @@ class Tabs{
   }
 });
 if(this.event){
-this.classChanger();
+let state = this.classChanger();
+return state;
+}else{
+  return {status:"success"};
 }
     }
 
@@ -39,6 +43,7 @@ this.classChanger();
          tablinks[i].className = tablinks[i].className.replace(" active", "");
      }
       this.evt.currentTarget.className += " active";
+      return {status:"success"};
   }
 
 
