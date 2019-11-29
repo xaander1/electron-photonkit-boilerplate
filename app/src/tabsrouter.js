@@ -26,7 +26,9 @@ class Tabs{
     scripts[i].parentNode.removeChild(scripts[i]);
   }
 });
-this.classChanger()
+if(this.event){
+this.classChanger();
+}
     }
 
 //Change class  to active

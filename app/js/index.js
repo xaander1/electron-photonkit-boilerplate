@@ -1,32 +1,27 @@
 const { Tabs } = require ('./src/tabsrouter.js');
-//setting tabs here
-// let mytab = document.querySelector('#favourite');
-// mytab.onclick=event=>{
-//   new Tabs(event,'nav-group-item','./mainview/photon.htm');
-// }
-
-
-//Nested Routing
-// let hometab = document.querySelector('#home');
-// hometab.onclick=event=>{
-//   new Tabs(event,'header-tab','sidebar','./sidebar/home.htm');
-//   let mytab = document.querySelector('#home_home');
-//   mytab.onclick=event=>{
-//     new Tabs(event,'nav-group-item','main','./mainview/home.htm');
-//   }
-// }
-
-const route = new Promise(
-  (resolve,reject)=>{
-    const homeTab = new Tabs(event,'header-tab','sidebar','./sidebar/home.htm');
-    resolve(homeTab);
-  }
-)
-const route2=()=>{
+//start scripts
+//new Tabs(null,'header-tab','sidebar','./sidebar/home.htm');
+//new Tabs(null,'nav-group-item','main','./mainview/home.htm');
+//set routing events
+const default_headroute = new Promise(
+  (resolve,reject)=>{resolve(new Tabs(null,'header-tab','sidebar','./sidebar/default.htm'));}
+);
+const default_mainroute = () =>{
   return new Promise(
     (resolve,reject)=>{
-      const myTab=new Tabs(event,'nav-group-item','main','./mainview/home.htm');
-      resolve(mytab);
+      resolve(new Tabs(null,'nav-group-item','main','./mainview/default.htm'));
     }
+  )};
+(()=>{
+  default_headroute
+  .then(default_mainroute)
+  .then(
+    //set routes
+
+
+
+
   )
+  .catch(error=>console.log(error))
 }
+)();
