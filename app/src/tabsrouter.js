@@ -1,11 +1,16 @@
 class Tabs{
     constructor(evt,tabslinks,section,page_to_load,){
+    return new Promise(
+      (res,rej)=>{
         this.page_to_load = page_to_load;
         this.tabslinks = tabslinks;
         this.evt=evt;
         this.section=section;
-        let log = this.tabsHandler();
-        return(log);
+        let status_log = this.tabsHandler();
+        res(status_log);
+      }
+    )
+
     }
 //handle the routing between pages
     tabsHandler(){
@@ -26,13 +31,14 @@ class Tabs{
     // To not repeat the element
     scripts[i].parentNode.removeChild(scripts[i]);
   }
+  if(this.event){
+  let state = this.classChanger();
+  return state;
+  }else{
+    return "success";
+  }  
 });
-if(this.event){
-let state = this.classChanger();
-return state;
-}else{
-  return {status:"success"};
-}
+
     }
 
 //Change class  to active
@@ -43,7 +49,7 @@ return state;
          tablinks[i].className = tablinks[i].className.replace(" active", "");
      }
       this.evt.currentTarget.className += " active";
-      return {status:"success"};
+      return "success";
   }
 
 
