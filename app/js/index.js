@@ -1,81 +1,16 @@
+//ES7 asynchronous functions
 const { Tabs } = require ('./src/tabsrouter.js');
-// //start scripts
-// //new Tabs(null,'header-tab','sidebar','./sidebar/home.htm');
-// //new Tabs(null,'nav-group-item','main','./mainview/home.htm');
-// //set routing events
-// const default_headroute = new Promise(
-//   //default sidebar
-//   (resolve,reject)=>{
-// let res = new Tabs(null,'header-tab','sidebar','./sidebar/default.htm');
-// console.log(res.status);
-//     resolve(res.status);
-//   }
-// );
-// const default_mainroute =async() =>{
-//   return new Promise(
-//     (resolve,reject)=>{
-//       //default mainbar
-//       resolve(new Tabs(null,'nav-group-item','main','./mainview/default.htm'));
-//     }
-//   )};
-//
-//
-//
-// (async()=>{
-//   // default_headroute
-//   // .then(default_mainroute)
-//   // .then(()=>{
-//   // //set routes
-//   // let all_header_tabs = document.querySelectorAll('.nav-group-item');
-//   // all_header_tabs.forEach(header_tab=>{
-//   //   console.log(header_tab.id);
-//   // })
-//   let checkSidebar=await default_headroute;
-//   let checkMain = await default_mainroute();
-//   if (checkSidebar=="success"){
-//     console.log('success buddy');
-//     let all_header_tabs = document.querySelectorAll('bike');
-//     console.log(all_header_tabs);
-//     all_header_tabs.forEach(header_tab=>{
-//       console.log(header_tab.id);})
-//
-//
-//   }
-//
-// })();
-//
-//
-// // function setTabsClickEvents(){
-// //   let all_header_tabs = document.querySelectorAll('.header_tab');
-// //   all_header_tabs.forEach(header_tab=>{
-// //     console.log(header_tab.id);
-// //   })
-// //
-// //
-// // }
-
-(() => {
-//   try{
-// await new Tabs(null,'header-tab','sidebar','./sidebar/default.htm');
-//   //const values= await test();
-//
-//   console.log(values);
-// }
-//   catch(err){
-//     console.log(err);
-//   }
-new Tabs(null,'header-tab','sidebar','./sidebar/default.htm')
-.then(()=>{console.log('budger');})
+async function renderTab() {
+	try{
+		let defaultTab = await new Tabs(null,'header-tab','sidebar','./sidebar/default.htm');
+	}
+	catch(err){
+		console.log(err);
+	}
+}
+(async function render() {
+	renderTab();
+	//default route
+	new Tabs(null,'nav-group-item','main','./mainview/default.htm');
 
 })();
-
-async function test(){
-return new Promise((res,rej)=>{
-  let all_header_tabs = document.querySelectorAll('.bike');
-  all_header_tabs.forEach(header_tab=>{
-    res(header_tab.id);
-})
-
-})
-
-}
