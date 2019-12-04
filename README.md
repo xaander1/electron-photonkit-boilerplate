@@ -10,6 +10,12 @@ npm install
 ```
 ## Usage
 
+### Import the neccessary modules
+```
+const { Tabs,listenForClicks,listenForNestedClicks } = require ('./src/tabsrouter.js');
+
+```
+
 
 ## Authors
 
