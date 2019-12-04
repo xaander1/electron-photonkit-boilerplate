@@ -5,12 +5,14 @@ const { Tabs,listenForClicks,listenForNestedClicks } = require ('./src/tabsroute
  Tabs(null,'sidebar','./sidebar/home.htm')
 .then((reply)=>{
 	if(reply=='Success'){
-	Tabs(null,'main','./mainview/home/alexander.htm');
+	Tabs(null,'main','./mainview/home/default.htm');
 	}
 })
 .then(()=>{
-	listenForNestedClicks('.header-tab','alexander.htm','.fav');
 	//listen for click events on sidebar
-	listenForClicks('.fav','home');
+  //common class,the name of folder
+	listenForClicks('.nav','home');
+  //Listen for nested rendering clicks
+  listenForNestedClicks('.header-tab','default.htm','.nav');
 })
 .catch(error=>console.log(error));
