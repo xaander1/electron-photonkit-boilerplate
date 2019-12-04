@@ -17,7 +17,8 @@ const { Tabs,listenForClicks,listenForNestedClicks } = require ('./src/tabsroute
 ```
 
 ### Tabs
-It mostly does the page routing and it takes in 3 arg's
+Its written in javascript promises and returns `success` once routing is done.
+It mostly does the page routing and it takes in 3 arg's.
 * arg 1 : The class name that belongs to all the tabs buttons *(enables resolving which tab is active)*
 * arg 2 : The **id tag** where the content is going to be injected.
 * arg 3 : The **url** of the page to load
@@ -36,15 +37,11 @@ For simplicity sakes in order for tabs router to work the following structure mu
 
 The `sidebar` contains html files
 
+The `mainview` contains a folders or folder then all html files
 
-The `mainview` contains a folder then then all html file
+The `id's` of the the tab buttons in `index.html` is the name of the `htm` elements in sidebar.
 
-
-The `id's` of the the tabs in `index.html` is the name of the `htm` elements in sidebar.
-
-
-The `id's` of the the tabs in `index.html` is the name of the folders in `mainview`
-
+The `id's` of the the tab buttons in `index.html` is the name of the folders in `mainview`
 
 The  `id's` of the tabs inside *sidebar* html's i.e `default.htm` is the name of the files in the folder they belong to where the folder name is the name of the `id` tab buttons in `index.html`   
 
@@ -56,7 +53,9 @@ It takes 3 arg's
 * arg1: The common class of all tab buttons on `index.html`
 * arg2: The default body to load. its recommened each folder in mainview to have a default
 * arg3: The common class of all tab buttons on sidebar html's *(all sidebars tab buttons should have a similar classname)*
- 
+
+
+ If your app does not contain sidebar you can just use
 
 
 
@@ -67,4 +66,3 @@ It takes 3 arg's
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
