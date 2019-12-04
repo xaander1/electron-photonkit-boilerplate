@@ -12,7 +12,7 @@ So you can only focus on building the app</p>
 
 <h3>Installing</h3>
 
-
+<code>
 git clone
 
 cd directory
@@ -20,3 +20,4 @@ cd directory
 npm install
 
 npm start
+</code>
