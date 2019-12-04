@@ -1,5 +1,5 @@
-<div>
-  <h2 style="text-align:center" id="Description">Description</h2>
+  <span id="back" style="text-align:left;margin-left:10px;width:40px;color:green;" class="icon icon-reply"></span>
+    <h3 style="text-align:center" id="Description">Description</h3>
 
   <p><code>eval()</code> is a function property of the global object.</p>
 
@@ -9,9 +9,12 @@
 
   <p>If the argument of <code>eval()</code> is not a string, <code>eval()</code> returns the argument unchanged. In the following example, the <code>String</code> constructor is specified and <code>eval()</code> returns a <code>String</code> object rather than evaluating the string.</p>
 
-</div>
-<button style="text-align:center" class="btn btn-large btn-primary" id="back">Back</button>
-</div>
+
+<style media="screen">
+  code{
+    font-weight: bold;
+  }
+</style>
 <script type="text/javascript">
 //Also supports external scripting
 let btn = document.querySelector('#back');
