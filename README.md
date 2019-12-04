@@ -11,13 +11,8 @@ So you can only focus on building the app</p>
 </ul>
 
 <h3>Installing</h3>
-`
+
 git clone
-
 cd directory
-
 npm install
-
 npm start
-
-`
