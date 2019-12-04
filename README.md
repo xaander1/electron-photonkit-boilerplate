@@ -1,3 +1,6 @@
+
+![electron-photonkit](build/icons/512x512.png)
+
 # Electron Photonkit Boilerplate
 Boilerplate built on electron and photonkit with tabs rendering so you can focus on building the app. It uses the Fetch API to route javascript html and css of the necessary called pages for dynamic routing.
 
