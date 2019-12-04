@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="build/icons/512x512.png" />
+  <img src="build/icons/512x512.png" width="600" height="200" />
 </p>
 
 # Electron Photonkit Boilerplate
