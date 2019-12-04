@@ -1,5 +1,7 @@
 
-![electron-photonkit](build/icons/512x512.png)
+<p align="center">
+  <img src="build/icons/512x512.png" />
+</p>
 
 # Electron Photonkit Boilerplate
 Boilerplate built on electron and photonkit with tabs rendering so you can focus on building the app. It uses the Fetch API to route javascript html and css of the necessary called pages for dynamic routing.
@@ -59,9 +61,9 @@ It takes 3 arg's
 
 
  If your app does not contain sidebar you can just use the two modules ` listenForClicks` and `Tabs` or just `Tabs` if you like ` listenForClicks` relies on `Tabs` while `listenForNestedClicks` relies on `Tabs` and `listenForClicks`.
- 
- The code that does our magic is in `src` folder. Feel free to edit it to fit your needs. 
- 
+
+ The code that does our magic is in `src` folder. Feel free to edit it to fit your needs.
+
 
 
 
