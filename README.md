@@ -8,7 +8,7 @@ Boilerplate built on electron and photonkit with tabs rendering so you can focus
 Consider it like href but for single page apps where you only href the necessary content you want to change.
 ## Getting Started
 ```
-git clone git@gitlab.com:xaander1/electron-photonkit-boilerplate.git myapp
+git clone https://gitlab.com/xaander1/electron-photonkit-boilerplate.git myapp
 cd myapp
 npm install
 ```
