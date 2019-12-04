@@ -22,9 +22,9 @@ const { Tabs,listenForClicks,listenForNestedClicks } = require ('./src/tabsroute
 ### Tabs
 Its written in javascript promises and returns `success` once routing is done.
 It mostly does the page routing and it takes in 3 arg's.
-* arg 1 : The class name that belongs to all the tabs buttons *(enables resolving which tab is active)*
-* arg 2 : The **id tag** where the content is going to be injected.
-* arg 3 : The **url** of the page to load
+* *arg 1 :* The class name that belongs to all the tabs buttons *(enables resolving which tab is active)*
+* *arg 2 :* The **id tag** where the content is going to be injected.
+* *arg 3 :* The **url** of the page to load
 
 ### listenForClicks
 
@@ -33,8 +33,8 @@ This creates event listeners for clicks in the tabs.
 
 It takes 2 arg's
 
-* arg1:  The class name that belongs to all the tabs buttons *(enables resolving which tab is active)*
-* arg 2: The folder in manview
+* *arg1:*  The class name that belongs to all the tabs buttons *(enables resolving which tab is active)*
+* *arg 2:* The folder in manview
 
 For simplicity sakes in order for tabs router to work the following structure must be followed.
 
@@ -53,12 +53,15 @@ This is the master of all of them it creates nested event listeners
 
 It takes 3 arg's
 
-* arg1: The common class of all tab buttons on `index.html`
-* arg2: The default body to load. its recommened each folder in mainview to have a default
-* arg3: The common class of all tab buttons on sidebar html's *(all sidebars tab buttons should have a similar classname)*
+* *arg1:* The common class of all tab buttons on `index.html`
+* *arg2:* The default body to load. its recommened each folder in mainview to have a default
+* *arg3:* The common class of all tab buttons on sidebar html's *(all sidebars tab buttons should have a similar classname)*
 
 
- If your app does not contain sidebar you can just use
+ If your app does not contain sidebar you can just use the two modules ` listenForClicks` and `Tabs` or just `Tabs` if you like ` listenForClicks` relies on `Tabs` while `listenForNestedClicks` relies on `Tabs` and `listenForClicks`.
+ 
+ The code that does our magic is in `src` folder. Feel free to edit it to fit your needs. 
+ 
 
 
 
