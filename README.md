@@ -1,23 +1,20 @@
-<h2>Electron Photonkit Boilerplate</h2>
-<p>Built with custom tabs renderer <br>
-So you can only focus on building the app</p>
-<p>Make use of the powerfull Fetch API  to load pages and <a id='btn' style="color:blue">eval()</a> to render javascript</p>
-<ul>
-<li>Supports rendering Javascript in the html pages</li>
-<li>Supports rendering CSS in the loaded Page</li>
-<li>Simple formart to follow</li>
-<li>Uses ES6 Javascript Promises</li>
-<li>Uses Photonkit to give you a desktop like experience</li>
-</ul>
-
-<h3>Installing</h3>
-
-<code>
-git clone
-
-cd directory
-
+# Electron Photonkit Boilerplate
+Boilerplate built on electron and photonkit with tabs rendering so you can focus on building the app. It uses the Fetch API to route javascript html and css of the necessary called pages for dynamic routing.
+Consider it like href but for single page apps where you only href the necessary content you want to change.
+## Getting Started
+```
+git clone git@gitlab.com:xaander1/electron-photonkit-boilerplate.git myapp
+cd myapp
 npm install
+```
+## Usage
 
-npm start
-</code>
+
+## Authors
+
+* **Alexander Njogu** - *Initial work* - [gitlab](https://gitlab.com/xaander1)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
