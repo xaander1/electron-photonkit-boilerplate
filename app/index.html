@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Zumari</title>
+    <title>Electron Photonkit Boilerplate</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/photon.min.css">
-
-    <!-- Javascript -->
-    <!-- <script src="js/menu.js" charset="utf-8"></script> -->
+    <script type="text/javascript">
+      const { remote } = require('electron')
+    </script>
   </head>
   <body>
     <div class="window">
@@ -36,10 +36,18 @@
       <span class="icon icon-home icon-text"></span>
       Filters
     </button>
-
-    <button class="btn btn-default btn-dropdown pull-right">
-      <span class="icon icon-megaphone"></span>
+      <div class="btn-group  pull-right">
+        <button class="btn btn-default" id="maximize">
+          <span class="icon icon-plus-circled"></span>
+        </button>
+      <button class="btn btn-default" id="minimize">
+        <span class="icon icon-minus-circled"></span>
+      </button>
+    <button class="btn btn-default" id="quit">
+      <span class="icon icon-cancel-circled"></span>
     </button>
+
+  </div>
   </div>
       </header>
 

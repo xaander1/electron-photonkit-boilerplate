@@ -1,5 +1,6 @@
 
 const { app,Menu, BrowserWindow, dialog, ipcMain, Notification,shell } = require("electron")
+//Menu.setApplicationMenu(false)
 // var app = require('app');  // Module to control application life.
 // var BrowserWindow = require('browser-window');  // Module to create native browser window.
 
@@ -21,30 +22,29 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 600,
-    height: 300,
-    'min-width': 500,
-    'min-height': 200,
+    width: 900,
+    height: 600,
+    'min-width': 900,
+    'min-height': 600,
     skipTaskbar: true,
     toolbar: false,
-      //frame: false,
-     //  transparent: true,
-     //titleBarStyle: 'hidden',
-    // 'accept-first-mouse': true,
-    // 'title-bar-style': 'hidden',
-    webPreferences: {
-
-        // preload: path.join(__dirname, 'preload.js'),
+    frame: false,
+    transparent: true,
+    titleBarStyle: 'hidden',
+    'accept-first-mouse': true,
+    'title-bar-style': 'hidden',
+     webPreferences: {
+       // preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true
        }
-  });
-  mainWindow.autoHideMenuBar = true;
+     });
+  //mainWindow.autoHideMenuBar = true;
   // and load the index.html of the app.
   mainWindow.loadFile('app/index.html');
   //mainWindow.loadUrl('file://' + __dirname + '/index.html');
 
   // Open the DevTools.
-  //mainWindow.openDevTools();
+  // mainWindow.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {

@@ -1,15 +1,14 @@
 {
-  "name": "zumari",
+  "name": "Boilerplate-X",
   "version": "1.0.0",
-  "description": "Flute music player",
+  "description": "Electron Photonkit Boilerplate",
   "main": "app/app.js",
   "scripts": {
      "start":"electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "music",
-    "player"
+    "boilerplate"
   ],
   "author": "alexander Njogu",
   "license": "MIT",
